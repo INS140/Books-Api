@@ -19,5 +19,7 @@ app.get('/', (req, res) => {
     res.json('Hello World!')
 })
 
+app.use('/books', require('./controllers/books'))
+
 // Server Listener
 app.listen(process.env.PORT, () => console.log('SERVER LIVE'))
